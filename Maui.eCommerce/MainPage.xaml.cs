@@ -14,7 +14,16 @@ namespace Maui.eCommerce
 
         private void InventoryClicked(object sender, EventArgs e)
         {
-            Shell.Current.GoToAsync("//Inventory Managment"); //current means singleton
+            Shell.Current.GoToAsync("//InventoryManagement"); //current means singleton
+        }
+
+        private void ShopClicked(object sender, EventArgs e)
+        {
+            Shell.Current.GoToAsync("//ShoppingManagement");
+        }
+        private void BillClicked(object sender, EventArgs e)//needs to print out price and a list of all the items bought
+        {
+            Shell.Current.GoToAsync("//CheckOut");
         }
     }
 

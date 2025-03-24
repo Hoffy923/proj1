@@ -13,8 +13,19 @@
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
     <ShellContent
-        Title="Invnetory"
-        ContentTemplate="{DataTemplate views:InventoryManagmentView}"
-        Route="Inventory Managment" />
-
+        Title="Inventory"
+        ContentTemplate="{DataTemplate views:InventoryManagementView}"
+        Route="InventoryManagement" />
+    <ShellContent
+    Title="Inventory"
+    ContentTemplate="{DataTemplate views:ProductDetails}"
+    Route="Product" />
+    <ShellContent
+       Title="Shop"
+       ContentTemplate="{DataTemplate views:ShoppingManagementView}" 
+       Route="ShoppingManagement" />
+    <ShellContent
+        Title="Bill"
+        ContentTemplate="{DataTemplate views:CheckOutView}" 
+        Route="CheckOut" />
 </Shell>

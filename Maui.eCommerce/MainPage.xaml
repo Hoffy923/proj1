@@ -9,10 +9,14 @@
                 Text="{Binding Display}"
                 />
             <Button
-            Text="Inventory Managment"
+            Text="Inventory Management"
                 Clicked="InventoryClicked"/>
             <Button
-            Text="Shop"/>
+            Text="Shop"
+                Clicked="ShopClicked"/>
+            <Button 
+                Text="Check Out" 
+                    Clicked="BillClicked"/>
         </VerticalStackLayout>
         
     </ScrollView>

@@ -1,15 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Maui.eCommerce.Views.InventoryManagmentView"
-             Title="InventoryManagmentView">
+             x:Class="Maui.eCommerce.Views.InventoryManagementView"
+             Title="InventoryManagementView"
+             NavigatedTo="ContentPage_NavigatedTo"
+             >
     <VerticalStackLayout>
-        <Label 
-            Text="Inventory Managment!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="10*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Entry Text="{Binding Query}" Grid.Column="0"/>
+            <Button Text="Search" Grid.Column="1" Clicked="SearchClicked"/>
+        </Grid>
         <ListView
-            ItemsSource="{Binding Products}"
+            ItemsSource="{Binding Path=Products}"
             SelectedItem="{Binding SelectedProduct}"
             >
             <ListView.ItemTemplate>
@@ -29,8 +35,10 @@
                 </DataTemplate>
             </ListView.ItemTemplate>   
         </ListView>
+        <Button Text= "Add" Clicked="AddClicked"/>
         <Button
      Text="Edit"
+     Clicked="EditClicked"
      />
         <Button
      Text="Delete"
@@ -38,7 +46,7 @@
      />
         <Button
             Text="Go Back"
-            Clicked="CancleClicked"
+            Clicked="CancelClicked"
             />
     </VerticalStackLayout>
 </ContentPage>
