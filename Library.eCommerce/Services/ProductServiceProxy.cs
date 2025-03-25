@@ -66,6 +66,8 @@ namespace Library.eCommerce.Services
 
         public Item AddOrUpdate(Item item)
         {
+            if (item == null)
+                return item;
             if (item.Id == 0)
             {
                 item.Id = LastKey + 1;

@@ -44,6 +44,7 @@ namespace Maui.eCommerce.ViewModels
         public void RefreshProductList()
         {
             NotifyPropertyChanged(nameof(TotalDisplay));
+            NotifyPropertyChanged(nameof(ShoppingCart));
         }
     }
 }
